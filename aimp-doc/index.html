@@ -512,6 +512,9 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#_aimp">2. AIMP</a></li>
+<li><a href="#_human_communications">3. Human Communications</a></li>
+<li><a href="#_a_i_agents">4. A.I. Agents</a></li>
+<li><a href="#_iot_devices">5. IoT Devices</a></li>
 </ul>
 </div>
 </div>
@@ -521,10 +524,38 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_overview">1.1. Overview</h3>
+<div class="paragraph">
+<p>People communicate with Artifical Intelligence (AI) Agents, which subsequentially perform actions on their behalf.  AI Agents may communicate among themselves to archive goals, such as a Personal AI communicating with a Scheduling AI to schedule an appointment.  AI Agents may communicate with Internet-of-Things (IoT) devices, such as to turn on a home appliance.  With implementations of AI Agents such as Siri, Google Now, Amazon Alexa, these communications are closed, proprietary, and non-extensible.  Communications with IoT devices are also typically proprietary to the device vendor and closed.  The goal of AIMP is to provide an open specification of messages across AI, Human, and IoT device communications to provide extensibility, cross system compatibility, transparency, and security.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Overview goes here</p>
+<p>Motivating Example</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A person, John, speaks to an IoT device and says "Turn off the light".  The device communicates with a proprietary cloud service to translate the speech to text.  This service parses the text to determine that it is a command to turn off a light, and uses the list of registered devices and context to determine which "light" to turn off.  The cloud service sends these details back to the local IoT device, which sends a device specific command over the local network to turn off the device.</p>
+</div>
+<div class="paragraph">
+<p>By using AIMP, this scenario is changes to open standards for each communication:</p>
+</div>
+<div class="paragraph">
+<p>A person, John, speaks to an IoT device and says "Turn off the light".  The IoT device encodes this vocal information and produces an AIMP message, which it can send to any supporting service.  This service converts the AIMP vocal messages into the text "Turn off the light".  This service can return an AIMP message with this text so that a difference processor can take the next step, or it can continue to process the message.  In this scenario, the message continues to be processed to determine which light is being referenced using context (location) and speaker identification.  These details are sent back to the IoT device in a AIMP message.  From this, the IoT device generates a local proprietary message specific to the device on the local network, and the device is turned off.  Using AIMP, additional steps could easily be layered in, such as using speaker identification to determine authentication (who is initiating the command to turn off the light?) and using this to determine authorization (is the initator allowed to turn off the light?).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Communication Links</p>
+</li>
+<li>
+<p>Protocol Stack</p>
+</li>
+<li>
+<p>Request / Reply</p>
+</li>
+<li>
+<p>Trust, Security, Authentication, Authorization</p>
 </li>
 </ul>
 </div>
@@ -537,10 +568,28 @@ table.CodeRay td.code>pre{padding:0}
 
 </div>
 </div>
+<div class="sect1">
+<h2 id="_human_communications">3. Human Communications</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_a_i_agents">4. A.I. Agents</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_iot_devices">5. IoT Devices</h2>
+<div class="sectionbody">
+
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-03-14 13:35:24 EDT
+Last updated 2016-03-14 19:08:41 EDT
 </div>
 </div>
 </body>

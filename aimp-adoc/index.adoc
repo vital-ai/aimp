@@ -12,4 +12,10 @@ include::overview.adoc[]
 
 == AIMP
 
+== Human Communications
+
+== A.I. Agents
+
+== IoT Devices
+
 
