@@ -1,0 +1,15 @@
+:source-highlighter: coderay
+:toc-position: left
+
+
+[width="100%"]
+= AIMP Specification
+
+:sectnums:
+
+include::overview.adoc[]
+
+
+== AIMP
+
+
