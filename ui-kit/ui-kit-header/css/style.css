@@ -887,7 +887,7 @@ section * {
 .header-1 .navbar .nav > li > a:hover,
 .header-1 .navbar .nav > li > a:focus,
 .header-1 .navbar .nav > li > a.active {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(200, 200, 200, 0.9);
 }
 .header-1 .navbar .nav > li.active > a {
   color: rgba(0, 0, 0, 0.4);
